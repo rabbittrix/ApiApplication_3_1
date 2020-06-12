@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Api.Domain.Entities;
 using Api.Domain.Interfaces;
-using Api.Domain.Services.User;
+using Api.Domain.Interfaces.Services.User;
 
 namespace Api.Service.Services
 {
