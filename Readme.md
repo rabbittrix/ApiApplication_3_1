@@ -8,3 +8,8 @@ dotnet new globaljson --sdk-version 3.0.201 (Created de file)
 dotnet ef migrations add UserMigration
 
 dotnet ef migrations remove
+
+# Database
+This is confugurated to use MySql and Sql-Server
+
+You can configurate on class: "ContextFactory, ConfigureRepository and MyContext (Database.Migration())".
