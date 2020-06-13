@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using System;
 using Api.Domain.Entities;
+using Api.Domain.Dtos;
 
 namespace Api.Application.Controllers
 {
@@ -53,7 +54,7 @@ namespace Api.Application.Controllers
         // POST api/users
         [Authorize("Bearer")]
         [HttpPost]
-        public async Task<ActionResult> Post ([FromBody] UserEntity user) {
+        public async Task<ActionResult> Post ([FromBody] UserDtoCreate user) {
              try
             {
                 var result = await _service.Post(user);
@@ -73,7 +74,7 @@ namespace Api.Application.Controllers
         // PUT api/users/5
         [Authorize("Bearer")]
         [HttpPut]
-        public async Task<ActionResult> Put ([FromBody] UserEntity user) {
+        public async Task<ActionResult> Put ([FromBody] UserDtoUpdate user) {
             try
             {
                 var result = await _service.Put(user);
