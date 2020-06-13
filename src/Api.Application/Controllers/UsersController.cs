@@ -21,8 +21,8 @@ namespace Api.Application.Controllers
          }
 
         // GET api/users
+        [Authorize("Bearer")]
         [HttpGet("")]
-        [AllowAnonymous]
         public async Task<ActionResult> GetAll(){
             try
             {
@@ -36,8 +36,8 @@ namespace Api.Application.Controllers
         }
 
         // GET api/users/5
+        [Authorize("Bearer")]
         [HttpGet ("{id}", Name="GetWithId")]
-        [AllowAnonymous]
         public async Task<ActionResult> Get(Guid id){
             try
             {
@@ -51,8 +51,8 @@ namespace Api.Application.Controllers
         }
 
         // POST api/users
+        [Authorize("Bearer")]
         [HttpPost]
-        [AllowAnonymous]
         public async Task<ActionResult> Post ([FromBody] UserEntity user) {
              try
             {
@@ -71,8 +71,8 @@ namespace Api.Application.Controllers
          }
 
         // PUT api/users/5
+        [Authorize("Bearer")]
         [HttpPut]
-        [AllowAnonymous]
         public async Task<ActionResult> Put ([FromBody] UserEntity user) {
             try
             {
@@ -91,8 +91,8 @@ namespace Api.Application.Controllers
          }
 
         // DELETE api/users/5
+        [Authorize("Bearer")]
         [HttpDelete("{id}")]
-        [AllowAnonymous]
         public async Task<ActionResult> Delete(Guid id){
             try
             {
